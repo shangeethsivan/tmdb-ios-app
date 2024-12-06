@@ -8,10 +8,20 @@
 import Foundation
 import CoreData
 import SwiftUI
+import SharedLibrary
 
 class HomeTabBarController: UITabBarController {
     init(_ viewContext: NSManagedObjectContext) {
         super.init(nibName: nil, bundle: nil)
+    
+        TMDBRepoImpl().testWrapper(completionHandler: { result, error in
+            print(result)
+            print(error)
+        })
+        
+//        TMDBRepoImpl().getPopularMovies { completion: MoviesResponseContainer?, (any Error)? in
+//            println(moviesReponseContainer)
+//        }
         
         let nowPlayingVC = NowPlayingViewController(viewContext)
         let savedItemsVC = SavedItemsViewController(viewContext)

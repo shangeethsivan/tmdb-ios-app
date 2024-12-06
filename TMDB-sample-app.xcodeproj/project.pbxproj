@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -414,6 +414,7 @@
 			buildPhases = (
 				7F27AE6B1456490F4C12C133 /* [CP] Check Pods Manifest.lock */,
 				0C2CABC8261249EC00160C82 /* Sources */,
+				825D398E2D01BA7E00DF1F52 /* Build Shared Framework */,
 				0C2CABC9261249EC00160C82 /* Frameworks */,
 				0C2CABCA261249EC00160C82 /* Resources */,
 				B5E3D094AAFE1EA948C07C8B /* [CP] Embed Pods Frameworks */,
@@ -578,6 +579,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		825D398E2D01BA7E00DF1F52 /* Build Shared Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Shared Framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$SRCROOT/../../multiplatform-library-template-main\"\n./gradlew embedAndSignAppleFrameworkForXcode -PxcodeConfiguration=${CONFIGURATION}\n";
 		};
 		89AA471221892625D618AFB1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -826,9 +845,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"TMDB-sample-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 5L68GJUQZC;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "TMDB-sample-app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -838,6 +857,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adumrewal.sampleapp.tmdb.TMDB-sample-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -849,9 +869,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"TMDB-sample-app/Preview Content\"";
-				DEVELOPMENT_TEAM = 5L68GJUQZC;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "TMDB-sample-app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -861,6 +881,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adumrewal.sampleapp.tmdb.TMDB-sample-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

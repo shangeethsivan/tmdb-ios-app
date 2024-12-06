@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-TMDB-sample-app/Pods-TMDB-sample-app-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework
+${PODS_ROOT}/SharedLibrary/framework/SharedLibrary.framework

@@ -1,16 +1,29 @@
 PODS:
   - Nuke (9.4.1)
+  - SharedLibrary (0.0.11)
 
 DEPENDENCIES:
   - Nuke (~> 9.4)
+  - SharedLibrary (from `https://github.com/shangeethsivan/kmplibrarysample.git`, tag `0.0.11`)
 
 SPEC REPOS:
   trunk:
     - Nuke
 
+EXTERNAL SOURCES:
+  SharedLibrary:
+    :git: https://github.com/shangeethsivan/kmplibrarysample.git
+    :tag: 0.0.11
+
+CHECKOUT OPTIONS:
+  SharedLibrary:
+    :git: https://github.com/shangeethsivan/kmplibrarysample.git
+    :tag: 0.0.11
+
 SPEC CHECKSUMS:
   Nuke: ca782d1a417904db70f2c65d6feb2329a2679491
+  SharedLibrary: 226c39044faad0d5bee286e563e12250c2a83e46
 
-PODFILE CHECKSUM: 50d976efa5fe6f6126cb4ff1f0d87053f101df10
+PODFILE CHECKSUM: 4ecdbc3409b3f57e29dae482f3c23f4837fb46ef
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.12.1
